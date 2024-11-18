@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <h1 class="logo">Page creator</h1>
+            <ul class="nav-links" role="menu">
+                <li role="menuitem"><a href="#home">Início</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#about">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo à Nossa Landing Page Creator</h2>
+            <p>Conheça nossos serviços e entre em contato!</p>
+        </div>
+    </section>
+
+
+    <section id="services" class="section services">
+        <h2>Nossos Serviços</h2>
+        <div class="carousel">
+            <button class="arrow left-arrow" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172249.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172530.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172847.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172249.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172530.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172847.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172249.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172530.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172847.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172249.png" alt="Serviço 1"></div>
+                <div class="service-card"><img src="/assets/Captura de tela 2024-11-18 172530.png" alt="Serviço 1"></div>
+            </div>
+            <button class="arrow right-arrow" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+    <section id="about" class="section about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa comprometida com a qualidade e a satisfação dos nossos clientes.</p>
+    </section>
+
+
+    <section id="contact" class="section contact">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form" onsubmit="return validateForm()">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2023 Minha Marca. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
