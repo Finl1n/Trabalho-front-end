@@ -45,3 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 startAutoSlide();
+
+document.getElementById('nameForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const nameInput = document.getElementById('name');
+  const errorMessage = document.getElementById('error-message');
+  const name = nameInput.value.trim();
+
+  if (!isNaN(name) || name === '') {
+    errorMessage.style.display = 'inline';
+  } else {
+    errorMessage.style.display = 'none';
+    console.log('Nome válido:', name);
+  }
+});
